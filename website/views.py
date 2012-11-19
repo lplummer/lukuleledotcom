@@ -4,5 +4,7 @@ from django.shortcuts import render
 
 from website.models import *
 
-def index(requeset):
-    return render(request, 'index.html')
+def bikes(request):
+    return render(request, 'bikes.html')
+def index(request):
+    return render(request, 'base.html')
