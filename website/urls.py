@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('lukuleledotcom.views',
+urlpatterns = patterns('website.views',
     # Examples:
     url(r'^$', 'index'),
 )
