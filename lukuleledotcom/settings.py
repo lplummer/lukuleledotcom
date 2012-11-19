@@ -10,9 +10,10 @@ ADMINS = (
 MANAGERS = ADMINS
 
 import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+DATABASES = {'default': dj_database_url.config(default='postgres://vwnljgjlfvncnf:WXmR-IzQhbJCszQlApyXjvsoM8@ec2-23-21-91-88.compute-1.amazonaws.com:5432/d8ani6rmk7nn02')}
 
-# DATABASES = {'default': dj_database_url.config(default='sqlite:///sqlite.db')}
+
+#DATABASES = {'default': dj_database_url.config(default='sqlite:///sqlite.db')}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
