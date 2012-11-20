@@ -10,7 +10,11 @@
 				<h1>Luke Plummer</h1>
 				<!--h5>Engineer, Musician, Producer</h5-->
 			</div>
-			{% block navbar %}{% endblock %}
+			<ul class='nav nav-pills span12'>
+				<li class='{{engineer}}'><a href='engineer'>Engineer</a></li>
+				<li class='{{music}}'><a href='music'>Musician</a></li>
+				<li class='{{production}}'><a href='production'>Producer</a></li>
+			</ul>
 			{% block content %}{% endblock %}
 		</div>
 	</body>

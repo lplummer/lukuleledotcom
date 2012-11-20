@@ -3,7 +3,8 @@ from django.conf import settings
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'index.html')
+	return render(request, 'index.html')
 	
-def bikes(request):
-    return render(request, 'bikes.html')
+def page(request, active):
+	page = str(active)
+	return render(request, page+'.html', {page:'active'})

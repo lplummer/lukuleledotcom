@@ -7,5 +7,5 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('lukuleledotcom.views',
     # Examples:
     url(r'^$', 'index'),
-	url(r'^bikes', 'bikes'),
+	url(r'^(?P<active>.*)', 'page'),
 )
