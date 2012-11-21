@@ -7,10 +7,13 @@ from models import *
 def index(request):
 	return render(request, 'index.html')
 
+def blog(request):
+	args = {'blog':'active'}
+	args['entries']=[{}]
+	return render(request, 'blog.html', args)
+	
 def page(request, active):
-	args = {str(active):'active'}
-	args['entries']=[]
-	return render(request, str(active)+'.html', args)
+	return render(request, str(active)+'.html', {str(active):'active'})
 	
 def lauren(request):
 	return render(request, 'lauren.html')

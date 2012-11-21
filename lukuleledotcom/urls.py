@@ -11,5 +11,6 @@ urlpatterns = patterns('lukuleledotcom.views',
 	url(r'^admin', include(admin.site.urls)),
     url(r'^$', 'index'),
 	url(r'^lauren', 'lauren'),
+	url(r'^blog', 'blog'),
 	url(r'^(?P<active>.*)', 'page'),
 )
