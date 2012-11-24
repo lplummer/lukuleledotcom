@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 	{% block content %}
 	<div>
-	{% for entry in request.User.blogposts.all %}
+	{% for e in entries %}
 	<div class = 'row'>
 		<div class = 'span4 well'>
-			<p class = 'lead'>{{entry.title}}</p>
-			<p>{{entry.content}}</p>
+			<p class = 'lead'>{{e.title}}</p>
+			<p>{{e.content}}</p>
+			<p class='muted'>{{e.date}}</p>
 		</div>
 	</div>
 	{% endfor %}

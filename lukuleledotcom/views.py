@@ -8,8 +8,7 @@ def index(request):
 	return render(request, 'index.html')
 
 def blog(request):
-	args = {'blog':'active'}
-	args['entries']=[{}]
+	args = {'blog':'active', 'entries':[{'title':e.title,'date':e.date,'content':e.content} for e in request.user.blogposts.all()]}
 	return render(request, 'blog.html', args)
 	
 def page(request, active):
