@@ -3,10 +3,10 @@
 	<div>
 	{% for e in entries %}
 	<div class = 'row'>
-		<div class = 'span4 well'>
+		<div class = 'span4 well' style = 'center'>
 			<p class = 'lead'>{{e.title}}</p>
-			<p>{{e.content}}</p>
-			<p class='muted'>{{e.author}}, {{e.date}}</p>
+			<p>{{e.content|linebreaks}}</p>
+			<p class='muted' style = 'text-align: right'>{{e.author}}, {{e.date}}</p>
 		</div>
 	</div>
 	{% endfor %}
