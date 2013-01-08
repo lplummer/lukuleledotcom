@@ -8,7 +8,7 @@ def index(request):
 	return render(request, 'index.html')
 
 def blog(request):
-	args = {'blog':'active', 'entries':[{'title':e.title,'date':e.date,'content':e.content,'author':e.author} for e in BlogPost.objects.all()]}
+	args = {'blog':'active', 'entries':[{'title':e.title,'date':e.date,'content':e.content,'author':e.author} for e in BlogPost.objects.order_by("date").reverse()]}
 	return render(request, 'blog.html', args)
 	
 def page(request, active):
